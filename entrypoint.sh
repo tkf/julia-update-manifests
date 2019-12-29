@@ -4,7 +4,10 @@ julia_projects="$2"
 
 set -ex
 
+mkdir -pv /tmp/install-julia
+cd /tmp/install-julia
 /install-julia.sh "$julia_version"
+cd -
 
 for project in $julia_projects
 do
