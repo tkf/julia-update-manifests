@@ -8,6 +8,7 @@ mkdir -pv /tmp/install-julia
 cd /tmp/install-julia
 /install-julia.sh "$julia_version"
 cd -
+julia -e 'using InteractiveUtils; versioninfo()'
 
 for project in $julia_projects
 do
