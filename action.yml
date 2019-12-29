@@ -1,0 +1,14 @@
+name: Update Manifest.toml
+inputs:
+  version:
+    description:
+      The Julia version
+    required: false
+    default: '1.0'
+  projects:
+    description:
+      Space-separated paths to Julia projects.
+runs:
+  using: docker
+  image: Dockerfile
+  args: ['${{ inputs.version }}', '${{ inputs.projects }}']
