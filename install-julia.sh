@@ -84,7 +84,7 @@ case $(uname) in
     esac
     echo "$BASEURL/linux/$ARCH/$JULIANAME-$SUFFIX.tar.gz"
     curl -L "$BASEURL/linux/$ARCH/$JULIANAME-$SUFFIX.tar.gz" | tar -xz
-    sudo ln -s $PWD/julia-*/bin/julia /usr/local/bin/julia
+    ln -s $PWD/julia-*/bin/julia /usr/local/bin/julia
     ;;
   Darwin)
     if [ -e /usr/local/bin/julia ]; then
