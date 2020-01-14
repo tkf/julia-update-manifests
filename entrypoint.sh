@@ -12,5 +12,5 @@ julia -e 'using InteractiveUtils; versioninfo()'
 
 for project in $julia_projects
 do
-    julia --project="$project" -e "import Pkg; Pkg.update()"
+    julia --project="$project" -e "import Pkg; Pkg.instantiate(); Pkg.update()"
 done
