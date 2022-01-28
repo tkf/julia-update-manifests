@@ -10,6 +10,7 @@ cd /tmp/install-julia
 cd -
 julia -e 'using InteractiveUtils; versioninfo()'
 
+export JULIA_PKG_PRECOMPILE_AUTO=0
 for project in $julia_projects
 do
     julia --project="$project" -e "import Pkg; Pkg.update()"
